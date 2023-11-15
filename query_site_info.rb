@@ -11,14 +11,11 @@ def parse_website(url, csv_filename)
     target_div = doc.css('div#BlinkDBContent_849210 > ul')
 
     if target_div.any?
-      # Знаходимо всі елементи <li> в межах цього <ul>
       li_elements = target_div.first.css('li')
 
-      # Виводимо дані в CSV-файл
       if li_elements.any?
         CSV.open(csv_filename, 'w') do |csv|
           li_elements.each do |li|
-            # Записуємо дані з кожного елемента <li> у CSV-файл
             csv << [li.text.strip]
           end
         end
@@ -35,8 +32,7 @@ def parse_website(url, csv_filename)
   end
 end
 
-# Замініть URL та ім'я файлу CSV на ті, які ви хочете використовувати
 website_url = 'https://www.hospitalsafetygrade.org/all-hospitals'
-csv_filename = 'li_elements_inside_div_data.csv'
+csv_filename = 'come_on_bruh.csv'
 
 parse_website(website_url, csv_filename)

@@ -1,1 +1,1 @@
-![diagram](https://prnt.sc/iGRe6YaxkuJQ)
+![diagram](https://imgur.com/a/6HXmnBN)
